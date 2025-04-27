@@ -1,0 +1,341 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #edededd4;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: var(--bs-font-sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.bg-light {
+  background-color: #f8f9fa;
+}
+.text-dark {
+  color: #212529;
+}
+.navbar-light .navbar-toggler {
+  /* Light theme toggler styles */
+}
+
+/* Dark theme styles (applied when the html tag has the 'dark' class) */
+.dark body {
+  background-color: #121212;
+  color: #f8f9fa;
+}
+
+.dark .bg-dark {
+  background-color: #343a40;
+}
+.dark .text-light {
+  color: #f8f9fa;
+}
+.dark .navbar-dark .navbar-toggler {
+  /* Dark theme toggler styles */
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.carousel-wrapper .carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-wrapper .carousel-item {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-wrapper .carousel-image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.card.bg-secondary.text-light {
+  /* Ensure good contrast */
+}
+
+.form-control {
+  /* Adjust for dark mode */
+}
+
+/* Your other navbar styles */
+.fixed-top {
+  /* ... */
+}
+.shadow-sm {
+  /* ... */
+}
+.text-white {
+  color: white !important;
+}
+
+.mt-navbar {
+    /* ... your mt-navbar styles ... */
+}
+
+@media (min-width: 992px) {
+  /* ... your larger screen mt-navbar styles ... */
+}
+
+/* Mobile Sliding Navbar Styles */
+@media (max-width: 991.98px) { /* Apply these styles only on screens smaller than lg */
+  .navbar-collapse {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, transform 0.3s ease-in-out;
+    width: 80%; /* Adjust width as needed */
+    position: fixed;
+    top: 0;
+    right: -80%;
+    z-index: 1050;
+    background-color: white; /* Default light mode background for dropdown */
+    border-left: 1px solid #e0e0e0; /* Optional left border */
+    align-items: flex-start; /* Keep aligning items to the start (top) */
+    padding-top: 4rem;
+    height: 100vh;
+    overflow-y: auto;
+    transform: translateX(0); /* Initially off-screen */
+    display: flex; /* Ensure it uses flex layout */
+    flex-direction: column; /* Stack items vertically */
+    justify-content: flex-start; /* Align content to the start (left/top) */
+  }
+
+  .dark .navbar-collapse {
+    background-color: #212529; /* Dark mode background for dropdown */
+    border-left-color: #343a40; /* Dark mode border */
+  }
+
+  .navbar-collapse.show {
+    transform: translateX(-100%); /* Slide in from the right when open */
+    max-height: 100vh; /* Ensure full height when open */
+    display: flex; /* Ensure it's displayed as flex when open */
+    flex-direction: column; /* Keep vertical stacking */
+    justify-content: flex-start; /* Align content to the start (left/top) */
+  }
+
+  .navbar-collapse .navbar-nav {
+    flex-direction: column !important; /* Stack the links vertically */
+    padding: 1rem;
+    width: 100%;
+  }
+
+  .navbar-collapse .navbar-nav .nav-link {
+    padding: 0.75rem 1rem;
+    text-align: left; /* Ensure text is left-aligned */
+  }
+
+  .navbar-toggler {
+    border: none;
+    background: transparent;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1051;
+  }
+
+  .navbar-toggler:focus {
+    box-shadow: none !important;
+    outline: none !important;
+    background-color: transparent !important; /* Remove blue background on focus */
+    border-color: transparent !important; /* Remove border on focus */
+  }
+
+  /* Style the horizontal lines */
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Default dark lines */
+    width: 1.5em;
+    height: 1.5em;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for rotation */
+  }
+
+  /* Style for light theme toggler icon */
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Light lines for transparent/light background */
+  }
+
+  /* Rotate the icon to show 'X' when the navbar is open */
+  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    transform: rotate(90deg);
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e"); /* Default dark 'X' */
+  }
+
+  /* Style for light theme 'X' icon */
+  .navbar-light .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e"); /* Light 'X' */
+  }
+
+  /* Custom styles for the toggler to remove blue background and border */
+  .custom-toggler {
+    border: none !important;
+    padding: 0.25rem 0.75rem; /* Adjust padding as needed */
+  }
+
+  /* Hero Section Styles (Mobile) */
+  .hero-section {
+    position: relative; /* Needed for absolute positioning of background */
+    color: white; /* Default text color */
+    overflow: hidden; /* To contain the background image */
+    margin-top: 5%;
+    min-height: 650px;
+    min-width: 100%;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/HeroImage.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place the background image behind the content */
+  }
+
+  .hero-content {
+    position: relative; /* Ensure content is above the background */
+    padding-top: 80px; /* Adjust as needed to avoid navbar overlap */
+    padding-bottom: 80px; /* Adjust as needed */
+  }
+
+  /* Dark theme hero section (applied when html has 'dark' class) */
+  .dark .hero-section {
+    color: white; /* Ensure text is white in dark theme */
+  }
+}
+
+/* Styles for larger screens */
+@media (min-width: 992px) {
+  .navbar-collapse {
+    position: static !important;
+    top: auto !important;
+    right: auto !important;
+    left: auto !important;
+    width: auto !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+    transform: none !important;
+    flex-grow: 1;
+    align-items: center;
+    padding-top: 0 !important;
+    border-left: none !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-end; /* Keep links on the right for laptop */
+  }
+
+  .navbar-collapse.show {
+    display: flex !important;
+  }
+
+  .navbar-collapse .navbar-nav {
+    flex-direction: row !important;
+    margin-left: auto;
+    padding: 0;
+    width: auto;
+  }
+
+  .navbar-collapse .navbar-nav .nav-link {
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar-toggler {
+    display: none !important;
+  }
+
+  /* Hero Section Styles (Desktop) */
+  .hero-section {
+    position: relative; /* Needed for absolute positioning of background */
+    color: white; /* Default text color */
+    overflow: hidden; /* To contain the background image */
+    min-height: 800px;
+  }
+
+  .hero-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/heroSection.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; /* Place the background image behind the content */
+  }
+
+  .hero-content {
+    position: relative; /* Ensure content is above the background */
+    padding-top: 80px; /* Adjust as needed to avoid navbar overlap */
+    padding-bottom: 80px; /* Adjust as needed */
+  }
+
+  /* Dark theme hero section (applied when html has 'dark' class) */
+  .dark .hero-section {
+    color: white; /* Ensure text is white in dark theme */
+  }
+}
+
+/* Theme toggle icon styles */
+.theme-toggle-icon {
+  /* ... your theme toggle icon styles ... */
+}
+
+.dark .theme-toggle-icon {
+  /* ... your dark theme toggle icon styles ... */
+}
