@@ -12,7 +12,7 @@ function Footer() {
       <Container>
         <Row className="justify-content-center">
           <Col md="auto" className="text-center">
-            &copy; {new Date().getFullYear()} [Your Painting Company Name]. All rights reserved.
+            &copy; {new Date().getFullYear()} InfinHues. All rights reserved.
           </Col>
         </Row>
       </Container>

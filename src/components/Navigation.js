@@ -62,7 +62,7 @@ function Navigation() {
     >
       <Container className="d-flex justify-content-between align-items-center">
         <Navbar.Brand as={Link} href="/">
-          Your Company Name
+          InfinHues
         </Navbar.Brand>
         <div className="d-flex align-items-center"> {/* Container for toggler and nav links */}
           <Button onClick={toggleNavbar} aria-controls="responsive-navbar-nav" aria-expanded={isOpen} className={`${togglerVariant} navbar-toggler me-2 d-lg-none`}>
