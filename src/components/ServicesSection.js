@@ -20,7 +20,7 @@ const services = [
     type: 'Exterior Painting',
     title: 'Exterior Painting Services in Goa',
     description: 'Protect and beautify your property’s exterior with our durable and weather-resistant painting solutions tailored for Goa’s coastal climate.',
-    imageSrc: '/images/Apartment.jpg',
+    imageSrc: '/images/apartments.jpg',
     link:'#contact', // Optional link
   },
   {
@@ -39,7 +39,7 @@ const services = [
   },
   {
     type: 'Speciality Painting',
-    title: '',
+    title: 'Speciality Painting Services in Goa',
     description: 'Transform your space with textured finishes, eco-friendly options, stencil designs, and faux effects by InfinHues specialists.',
     imageSrc: '/images/Interior_Painting.jpg', // Add image path
     link: '#contact', // Optional link

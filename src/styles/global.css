@@ -388,7 +388,6 @@ a {
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  max-width: 90%;
   transition: transform 0.3s ease;
 }
 
