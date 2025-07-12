@@ -13,8 +13,8 @@ function ContactSection() {
 
 
   const emailAddress = 'aditigk9@gmail.com'; // Replace with your actual email
-  const phoneNumber = '+91 7218594534'; // Replace with your actual phone number (with country code)
-  const whatsappNumber = '917218594534'; // Replace with your actual WhatsApp number (with country code)
+  const phoneNumber = '+91 9405875022'; // Replace with your actual phone number (with country code)
+  const whatsappNumber = '919405875022'; // Replace with your actual WhatsApp number (with country code)
   const whatsappMessage = encodeURIComponent('Hello! I am interested in your painting services.'); // Optional default message
 
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
