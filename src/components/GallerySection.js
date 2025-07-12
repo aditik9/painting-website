@@ -58,7 +58,7 @@ function GallerySection({ serviceType, title }) {
   }
 
   return (
-    <section className={`py-5 ${isDark ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
+    <section id="gallery" className={`py-5 ${isDark ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
       <Container>
         <h3 className="text-center mb-4">{title}</h3>
         <div className="carousel-wrapper">
@@ -67,6 +67,7 @@ function GallerySection({ serviceType, title }) {
               <Carousel.Item key={idx}>
                 <div className="carousel-image-container">
                   <Image
+                    className='content'
                     src={image.src}
                     alt={image.alt}
                     fill

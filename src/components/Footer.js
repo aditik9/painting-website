@@ -1,4 +1,4 @@
-'use client'; // This line tells Next.js to treat this as a Client Component
+'use client';
 
 import { Container, Row, Col } from 'react-bootstrap';
 import { useTheme } from 'next-themes';
@@ -10,9 +10,11 @@ function Footer() {
   return (
     <footer className={`py-4 mt-5 ${isDark ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
       <Container>
-        <Row className="justify-content-center">
-          <Col md="auto" className="text-center">
-            &copy; {new Date().getFullYear()} [Your Painting Company Name]. All rights reserved.
+        <Row className="justify-content-center text-center">
+          <Col md="auto">
+            <p >
+              &copy; {new Date().getFullYear()} InfinHues – Painting Services in Goa. All rights reserved.
+            </p>
           </Col>
         </Row>
       </Container>
