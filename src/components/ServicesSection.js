@@ -90,7 +90,7 @@ function ServiceCard({ type, title, description, imageSrc, link }) {
         <img src={imageSrc} alt={`${title} | InfinHues Painting Services Goa`} className="img-fluid" />
         <div className="service-overlay">
           <h4>{title}</h4>
-          <p className="lead text-justify">{description}</p>
+          <p className="text-justify">{description}</p>
           {link && (
             <Link href={link} className={`btn ${isDark ? 'btn-primary' : 'btn-warning'} mt-2`} aria-label={`Get a quote for ${title}`}>
               Get Quote
