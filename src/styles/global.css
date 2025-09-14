@@ -5,10 +5,30 @@
   --foreground: #171717;
 }
 
+#headlines{
+  /* background-color: #e0e0e0; */
+  /* background: rgba(255, 255, 255, 0.1);  */
+  /* backdrop-filter: blur(20px); */
+  /* -webkit-backdrop-filter: blur(20px); */
+  background: rgba(2, 33, 35, 0.25); /* semi-transparent */
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 3%;
+  padding: 10%;
+
+}
+
 .bg-transparent {
   background-color: transparent !important;
 }
 
+#brandname{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#about_items{
+  border-collapse: separate; border-spacing: 0 10px;
+}
 
 
 @media (prefers-color-scheme: dark) {
@@ -220,30 +240,6 @@ a {
     border-color: transparent !important; /* Remove border on focus */
   }
 
-  /* Style the horizontal lines */
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Default dark lines */
-    width: 1.5em;
-    height: 1.5em;
-    transition: transform 0.3s ease-in-out; /* Smooth transition for rotation */
-  }
-
-  /* Style for light theme toggler icon */
-  .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Light lines for transparent/light background */
-  }
-
-  /* Rotate the icon to show 'X' when the navbar is open */
-  .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    transform: rotate(90deg);
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e"); /* Default dark 'X' */
-  }
-
-  /* Style for light theme 'X' icon */
-  .navbar-light .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M6 6l18 18M6 24L24 6'/%3e%3c/svg%3e"); /* Light 'X' */
-  }
-
   /* Custom styles for the toggler to remove blue background and border */
   .custom-toggler {
     border: none !important;
@@ -388,6 +384,7 @@ a {
   position: relative;
   overflow: hidden;
   cursor: pointer;
+  border-radius: 7%;
   transition: transform 0.3s ease;
 }
 

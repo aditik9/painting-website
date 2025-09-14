@@ -3,7 +3,7 @@
 import { React, useState } from 'react';
 import { useTheme } from 'next-themes'; // Import useTheme
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaEnvelope, FaPhone, FaWhatsapp } from 'react-icons/fa'; // Import icons
+import { FaEnvelope, FaPhone, FaWhatsapp, FaInstagram } from 'react-icons/fa'; // Import icons
 
 function ContactSection() {
 
@@ -13,6 +13,7 @@ function ContactSection() {
 
 
   const emailAddress = 'aditigk9@gmail.com'; // Replace with your actual email
+  const InstagramAccount = 'https://www.instagram.com/infinhues';
   const phoneNumber = '+91 9405875022'; // Replace with your actual phone number (with country code)
   const whatsappNumber = '919405875022'; // Replace with your actual WhatsApp number (with country code)
   const whatsappMessage = encodeURIComponent('Hello! I am interested in your painting services.'); // Optional default message
@@ -37,13 +38,20 @@ return (
                   {emailAddress}
                 </a>
               </div>
+              
               <div className="mb-3">
-                <FaPhone className="me-2" size={24} />
-                <a href={`tel:${phoneNumber}`} className={`text-decoration-none`}>
-                  {phoneNumber}
+                <FaInstagram className="me-2 text-danger" size={24} />
+                <a
+                  href={InstagramAccount}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-decoration-none"
+                >
+                  Follow us on Instagram
                 </a>
               </div>
-              <div>
+
+              <div className="mb-3">
                 <FaWhatsapp className="me-2 text-success" size={24} />
                 <a
                   href={whatsappLink}
@@ -52,6 +60,13 @@ return (
                   className={`text-decoration-none`}
                 >
                   Chat with us on WhatsApp
+                </a>
+              </div>
+
+              <div className="mb-3">
+                <FaPhone className="me-2" size={24} />
+                <a href={`tel:${phoneNumber}`} className={`text-decoration-none`}>
+                  {phoneNumber}
                 </a>
               </div>
             </address>

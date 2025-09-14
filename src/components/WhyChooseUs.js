@@ -11,7 +11,7 @@ function WhyChooseUsSection() {
   return (
     <section className={`py-5 ${isDark ? 'bg-dark text-light' : 'bg-light text-dark'}`}>
       <Container className="lead">
-        <h2>Why InfinHues is Goa’s Most Trusted Painting Contractor</h2>
+        <h2>Why InfinHues is Goa’s Most Trusted Painting Service</h2>
         <ul>
           <li>15+ Years of Experience</li>
           <li>Skilled & Verified Painters</li>

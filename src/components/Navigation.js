@@ -4,6 +4,7 @@ import { Navbar, Nav, Container, Button } from 'react-bootstrap';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { useTheme } from 'next-themes';
+import Image from 'next/image';
 
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
@@ -61,8 +62,10 @@ function Navigation() {
       className={navbarClass}
     >
       <Container className="d-flex justify-content-between align-items-center">
-        <Navbar.Brand as={Link} href="/">
-          InfinHues
+        <Navbar.Brand id="brandname" as={Link} href="/">
+        <Image src="/images/logo.png" width={80} height={45} alt="Logo" />
+
+        Infinhues
         </Navbar.Brand>
         <div className="d-flex align-items-center"> {/* Container for toggler and nav links */}
           <Button onClick={toggleNavbar} aria-controls="responsive-navbar-nav" aria-expanded={isOpen} className={`${togglerVariant} navbar-toggler me-2 d-lg-none`}>

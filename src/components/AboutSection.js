@@ -38,16 +38,36 @@ return (
       <Container>
         <Row>
           <Col md={12}>
-            <header>
-              <h2>About InfinHues – Trusted Painting Contractors in Goa</h2>
+          <section>
+             <header>
+              <h2>About InfinHues – Painting Experts in Goa</h2>
             </header>
-            <p className="lead">
-              With 15+ years of experience, <strong>InfinHues</strong> is a leading painting company serving both North and South Goa.
-              Our skilled contractors bring vibrant color, durability, and quality craftsmanship to homes, offices, shops, housing societies, and cultural spaces like temples and churches.
-            </p>
-            <p  className="lead">
-              We’re proud to deliver reliable painting services in Panaji, Mapusa, Margao, Vasco, Ponda, and all major regions of Goa. Whether it’s residential, commercial, or industrial work, InfinHues ensures excellence every time.
-            </p>
+            <table id="about_items">
+              <tr>
+               ✅ Over <strong>15 years of experience</strong> in the painting industry
+              </tr>
+              <tr>
+               🏠 Providing expert <strong>residential, commercial, and industrial painting services</strong>
+              </tr>
+              <tr>
+               🎨 Specializing in <strong>interior and exterior painting</strong>, waterproofing solutions, and custom decorative finishes such as murals and textures
+ 
+              </tr>
+              <tr>
+              👷‍♂️ Team of <strong>skilled, reliable painting contractors</strong> using top-grade, weather-resistant materials
+
+              </tr>
+              <tr>
+              🏢 Trusted by <strong>homeowners, offices, shops, housing societies, temples, and churches</strong>
+               </tr>
+               <tr>
+                ⭐ Committed to <strong>quality craftsmanship, durability, and timely project completion</strong>
+               </tr>
+
+              
+            </table>
+          </section>
+           
           </Col>
         </Row>
       </Container>
