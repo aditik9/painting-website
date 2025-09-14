@@ -274,12 +274,6 @@ a {
     padding-bottom: 80px; /* Adjust as needed */
   }
 
-  .hero-content p, h1 {
-    /* background: rgba(255, 255, 255, 0.08); */
-    backdrop-filter: blur(6px);
-    color: white;
-    text-shadow:#0a0a0a;
-  }
 
   /* Dark theme hero section (applied when html has 'dark' class) */
   .dark .hero-section {
@@ -358,12 +352,7 @@ a {
     padding-bottom: 80px; /* Adjust as needed */
   }
 
-  .hero-content p, h1 {
-    /* background: rgba(255, 255, 255, 0.08); */
-    backdrop-filter: blur(6px);
-    color: white;
-    text-shadow:#0a0a0a;
-  }
+  
 
   /* Dark theme hero section (applied when html has 'dark' class) */
   .dark .hero-section {
